@@ -1,0 +1,11 @@
+{
+    "input_file": "distilled_dataset/verified_tasks.json",
+    "model_file": "distilled_model/student_quality_model.json",
+    "training_examples": 67,
+    "label_counts": {
+        "REJECT": 31,
+        "ACCEPT": 36
+    },
+    "vocabulary_size": 238,
+    "model_type": "multinomial_naive_bayes"
+}

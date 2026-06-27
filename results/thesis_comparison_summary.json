@@ -1,0 +1,86 @@
+{
+    "benchmark": {
+        "source": "generated_tasks.json",
+        "total_tasks": 67,
+        "acceptance_threshold": 80,
+        "families": {
+            "study": {
+                "REJECT": 6,
+                "ACCEPT": 6
+            },
+            "event": {
+                "ACCEPT": 6,
+                "REJECT": 5
+            },
+            "travel": {
+                "ACCEPT": 6,
+                "REJECT": 5
+            },
+            "cooking": {
+                "ACCEPT": 6,
+                "REJECT": 5
+            },
+            "project": {
+                "ACCEPT": 6,
+                "REJECT": 5
+            },
+            "shopping": {
+                "ACCEPT": 6,
+                "REJECT": 5
+            }
+        },
+        "categories": {
+            "chain_goal": {
+                "count": 31,
+                "average_quality_score": 89.52,
+                "decisions": {
+                    "REJECT": 1,
+                    "ACCEPT": 30
+                }
+            },
+            "trivial_goal": {
+                "count": 12,
+                "average_quality_score": 65.0,
+                "decisions": {
+                    "ACCEPT": 6,
+                    "REJECT": 6
+                }
+            },
+            "dead_branch": {
+                "count": 6,
+                "average_quality_score": 70.0,
+                "decisions": {
+                    "REJECT": 6
+                }
+            },
+            "unreachable_goal": {
+                "count": 18,
+                "average_quality_score": 34.17,
+                "decisions": {
+                    "REJECT": 18
+                }
+            }
+        }
+    },
+    "original_agentgen_style_baseline": {
+        "description": "Baseline assumes generated tasks are passed forward without the quality-aware verifier filter.",
+        "tasks_passed_forward": 67,
+        "semantic_quality_failures_not_filtered": 31
+    },
+    "quality_aware_pipeline": {
+        "accepted_tasks": 36,
+        "rejected_tasks": 31,
+        "rejection_rate": 0.4627,
+        "failure_flags": {
+            "dead_actions": 55,
+            "trivial_goal": 12,
+            "unreachable_goal": 18
+        }
+    },
+    "student_model": {
+        "evaluation_method": "leave_one_out",
+        "total_examples": 67,
+        "leave_one_out_accuracy": 0.6269,
+        "fitted_model_accuracy": 0.7164
+    }
+}

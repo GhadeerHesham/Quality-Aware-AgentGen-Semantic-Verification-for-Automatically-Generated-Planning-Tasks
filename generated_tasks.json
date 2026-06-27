@@ -1,0 +1,404 @@
+[
+    {
+        "id": "study_chain_goal_1",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_1.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "study_chain_goal_2",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_2.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "study_chain_goal_3",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_3.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "study_chain_goal_4",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_4.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "study_chain_goal_5",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_5.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "study_chain_goal_6",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_6.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "study_trivial_final_goal",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_trivial_final_goal.pddl",
+        "category": "trivial_goal"
+    },
+    {
+        "id": "study_dead_branch_final_goal",
+        "domain_file": "benchmark_domains\\study_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\study_dead_branch_final_goal.pddl",
+        "category": "dead_actions"
+    },
+    {
+        "id": "study_trivial_dead_branch_goal",
+        "domain_file": "benchmark_domains\\study_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\study_trivial_dead_branch_goal.pddl",
+        "category": "combined_quality_failure"
+    },
+    {
+        "id": "study_unreachable_goal_1",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_unreachable_goal_1.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "study_unreachable_goal_2",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_unreachable_goal_2.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "study_unreachable_goal_3",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_unreachable_goal_3.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "event_chain_goal_1",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_1.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "event_chain_goal_2",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_2.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "event_chain_goal_3",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_3.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "event_chain_goal_4",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_4.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "event_chain_goal_5",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_5.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "event_trivial_final_goal",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_trivial_final_goal.pddl",
+        "category": "trivial_goal"
+    },
+    {
+        "id": "event_dead_branch_final_goal",
+        "domain_file": "benchmark_domains\\event_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\event_dead_branch_final_goal.pddl",
+        "category": "dead_actions"
+    },
+    {
+        "id": "event_trivial_dead_branch_goal",
+        "domain_file": "benchmark_domains\\event_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\event_trivial_dead_branch_goal.pddl",
+        "category": "combined_quality_failure"
+    },
+    {
+        "id": "event_unreachable_goal_1",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_unreachable_goal_1.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "event_unreachable_goal_2",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_unreachable_goal_2.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "event_unreachable_goal_3",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_unreachable_goal_3.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "travel_chain_goal_1",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_1.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "travel_chain_goal_2",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_2.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "travel_chain_goal_3",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_3.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "travel_chain_goal_4",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_4.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "travel_chain_goal_5",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_5.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "travel_trivial_final_goal",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_trivial_final_goal.pddl",
+        "category": "trivial_goal"
+    },
+    {
+        "id": "travel_dead_branch_final_goal",
+        "domain_file": "benchmark_domains\\travel_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_dead_branch_final_goal.pddl",
+        "category": "dead_actions"
+    },
+    {
+        "id": "travel_trivial_dead_branch_goal",
+        "domain_file": "benchmark_domains\\travel_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_trivial_dead_branch_goal.pddl",
+        "category": "combined_quality_failure"
+    },
+    {
+        "id": "travel_unreachable_goal_1",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_unreachable_goal_1.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "travel_unreachable_goal_2",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_unreachable_goal_2.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "travel_unreachable_goal_3",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_unreachable_goal_3.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "cooking_chain_goal_1",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_1.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "cooking_chain_goal_2",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_2.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "cooking_chain_goal_3",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_3.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "cooking_chain_goal_4",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_4.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "cooking_chain_goal_5",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_5.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "cooking_trivial_final_goal",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_trivial_final_goal.pddl",
+        "category": "trivial_goal"
+    },
+    {
+        "id": "cooking_dead_branch_final_goal",
+        "domain_file": "benchmark_domains\\cooking_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_dead_branch_final_goal.pddl",
+        "category": "dead_actions"
+    },
+    {
+        "id": "cooking_trivial_dead_branch_goal",
+        "domain_file": "benchmark_domains\\cooking_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_trivial_dead_branch_goal.pddl",
+        "category": "combined_quality_failure"
+    },
+    {
+        "id": "cooking_unreachable_goal_1",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_unreachable_goal_1.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "cooking_unreachable_goal_2",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_unreachable_goal_2.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "cooking_unreachable_goal_3",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_unreachable_goal_3.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "project_chain_goal_1",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_1.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "project_chain_goal_2",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_2.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "project_chain_goal_3",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_3.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "project_chain_goal_4",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_4.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "project_chain_goal_5",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_5.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "project_trivial_final_goal",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_trivial_final_goal.pddl",
+        "category": "trivial_goal"
+    },
+    {
+        "id": "project_dead_branch_final_goal",
+        "domain_file": "benchmark_domains\\project_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\project_dead_branch_final_goal.pddl",
+        "category": "dead_actions"
+    },
+    {
+        "id": "project_trivial_dead_branch_goal",
+        "domain_file": "benchmark_domains\\project_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\project_trivial_dead_branch_goal.pddl",
+        "category": "combined_quality_failure"
+    },
+    {
+        "id": "project_unreachable_goal_1",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_unreachable_goal_1.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "project_unreachable_goal_2",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_unreachable_goal_2.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "project_unreachable_goal_3",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_unreachable_goal_3.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "shopping_chain_goal_1",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_1.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "shopping_chain_goal_2",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_2.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "shopping_chain_goal_3",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_3.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "shopping_chain_goal_4",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_4.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "shopping_chain_goal_5",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_5.pddl",
+        "category": "chain_goal"
+    },
+    {
+        "id": "shopping_trivial_final_goal",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_trivial_final_goal.pddl",
+        "category": "trivial_goal"
+    },
+    {
+        "id": "shopping_dead_branch_final_goal",
+        "domain_file": "benchmark_domains\\shopping_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_dead_branch_final_goal.pddl",
+        "category": "dead_actions"
+    },
+    {
+        "id": "shopping_trivial_dead_branch_goal",
+        "domain_file": "benchmark_domains\\shopping_dead_branch_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_trivial_dead_branch_goal.pddl",
+        "category": "combined_quality_failure"
+    },
+    {
+        "id": "shopping_unreachable_goal_1",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_unreachable_goal_1.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "shopping_unreachable_goal_2",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_unreachable_goal_2.pddl",
+        "category": "unreachable_goal"
+    },
+    {
+        "id": "shopping_unreachable_goal_3",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_unreachable_goal_3.pddl",
+        "category": "unreachable_goal"
+    }
+]

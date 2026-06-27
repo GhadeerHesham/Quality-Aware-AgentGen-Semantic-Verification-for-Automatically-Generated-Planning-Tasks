@@ -1,0 +1,549 @@
+{
+    "evaluation_method": "leave_one_out",
+    "total_examples": 67,
+    "correct": 42,
+    "accuracy": 0.6269,
+    "predictions": [
+        {
+            "id": "study_chain_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 75,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "study_chain_goal_2",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 45.48,
+            "correct": false
+        },
+        {
+            "id": "study_chain_goal_3",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 85,
+            "estimated_quality_score": 45.48,
+            "correct": false
+        },
+        {
+            "id": "study_chain_goal_4",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 90,
+            "estimated_quality_score": 45.48,
+            "correct": false
+        },
+        {
+            "id": "study_chain_goal_5",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 95,
+            "estimated_quality_score": 45.48,
+            "correct": false
+        },
+        {
+            "id": "study_chain_goal_6",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 100,
+            "estimated_quality_score": 45.48,
+            "correct": false
+        },
+        {
+            "id": "study_trivial_final_goal",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 45.48,
+            "correct": false
+        },
+        {
+            "id": "study_dead_branch_final_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 70,
+            "estimated_quality_score": 44.67,
+            "correct": true
+        },
+        {
+            "id": "study_trivial_dead_branch_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 50,
+            "estimated_quality_score": 45.33,
+            "correct": true
+        },
+        {
+            "id": "study_unreachable_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 30,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "study_unreachable_goal_2",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 30,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "study_unreachable_goal_3",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 30,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "event_chain_goal_1",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "event_chain_goal_2",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 85,
+            "estimated_quality_score": 88.43,
+            "correct": true
+        },
+        {
+            "id": "event_chain_goal_3",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 90,
+            "estimated_quality_score": 88.29,
+            "correct": true
+        },
+        {
+            "id": "event_chain_goal_4",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 95,
+            "estimated_quality_score": 88.14,
+            "correct": true
+        },
+        {
+            "id": "event_chain_goal_5",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 100,
+            "estimated_quality_score": 88.0,
+            "correct": true
+        },
+        {
+            "id": "event_trivial_final_goal",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "event_dead_branch_final_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 70,
+            "estimated_quality_score": 44.67,
+            "correct": true
+        },
+        {
+            "id": "event_trivial_dead_branch_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 50,
+            "estimated_quality_score": 45.33,
+            "correct": true
+        },
+        {
+            "id": "event_unreachable_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "event_unreachable_goal_2",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "event_unreachable_goal_3",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "travel_chain_goal_1",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "travel_chain_goal_2",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 85,
+            "estimated_quality_score": 88.43,
+            "correct": true
+        },
+        {
+            "id": "travel_chain_goal_3",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 90,
+            "estimated_quality_score": 88.29,
+            "correct": true
+        },
+        {
+            "id": "travel_chain_goal_4",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 95,
+            "estimated_quality_score": 88.14,
+            "correct": true
+        },
+        {
+            "id": "travel_chain_goal_5",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 100,
+            "estimated_quality_score": 88.0,
+            "correct": true
+        },
+        {
+            "id": "travel_trivial_final_goal",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "travel_dead_branch_final_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 70,
+            "estimated_quality_score": 44.67,
+            "correct": true
+        },
+        {
+            "id": "travel_trivial_dead_branch_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 50,
+            "estimated_quality_score": 45.33,
+            "correct": true
+        },
+        {
+            "id": "travel_unreachable_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "travel_unreachable_goal_2",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "travel_unreachable_goal_3",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "cooking_chain_goal_1",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "cooking_chain_goal_2",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 85,
+            "estimated_quality_score": 88.43,
+            "correct": true
+        },
+        {
+            "id": "cooking_chain_goal_3",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 90,
+            "estimated_quality_score": 88.29,
+            "correct": true
+        },
+        {
+            "id": "cooking_chain_goal_4",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 95,
+            "estimated_quality_score": 88.14,
+            "correct": true
+        },
+        {
+            "id": "cooking_chain_goal_5",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 100,
+            "estimated_quality_score": 88.0,
+            "correct": true
+        },
+        {
+            "id": "cooking_trivial_final_goal",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "cooking_dead_branch_final_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 70,
+            "estimated_quality_score": 44.67,
+            "correct": true
+        },
+        {
+            "id": "cooking_trivial_dead_branch_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 50,
+            "estimated_quality_score": 45.33,
+            "correct": true
+        },
+        {
+            "id": "cooking_unreachable_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "cooking_unreachable_goal_2",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "cooking_unreachable_goal_3",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "project_chain_goal_1",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "project_chain_goal_2",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 85,
+            "estimated_quality_score": 88.43,
+            "correct": true
+        },
+        {
+            "id": "project_chain_goal_3",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 90,
+            "estimated_quality_score": 88.29,
+            "correct": true
+        },
+        {
+            "id": "project_chain_goal_4",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 95,
+            "estimated_quality_score": 88.14,
+            "correct": true
+        },
+        {
+            "id": "project_chain_goal_5",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 100,
+            "estimated_quality_score": 88.0,
+            "correct": true
+        },
+        {
+            "id": "project_trivial_final_goal",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "project_dead_branch_final_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 70,
+            "estimated_quality_score": 44.67,
+            "correct": true
+        },
+        {
+            "id": "project_trivial_dead_branch_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 50,
+            "estimated_quality_score": 45.33,
+            "correct": true
+        },
+        {
+            "id": "project_unreachable_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "project_unreachable_goal_2",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "project_unreachable_goal_3",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "shopping_chain_goal_1",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "shopping_chain_goal_2",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 85,
+            "estimated_quality_score": 88.43,
+            "correct": true
+        },
+        {
+            "id": "shopping_chain_goal_3",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 90,
+            "estimated_quality_score": 88.29,
+            "correct": true
+        },
+        {
+            "id": "shopping_chain_goal_4",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 95,
+            "estimated_quality_score": 88.14,
+            "correct": true
+        },
+        {
+            "id": "shopping_chain_goal_5",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 100,
+            "estimated_quality_score": 88.0,
+            "correct": true
+        },
+        {
+            "id": "shopping_trivial_final_goal",
+            "actual_decision": "ACCEPT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 80,
+            "estimated_quality_score": 88.57,
+            "correct": true
+        },
+        {
+            "id": "shopping_dead_branch_final_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 70,
+            "estimated_quality_score": 44.67,
+            "correct": true
+        },
+        {
+            "id": "shopping_trivial_dead_branch_goal",
+            "actual_decision": "REJECT",
+            "predicted_decision": "REJECT",
+            "actual_quality_score": 50,
+            "estimated_quality_score": 45.33,
+            "correct": true
+        },
+        {
+            "id": "shopping_unreachable_goal_1",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "shopping_unreachable_goal_2",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        },
+        {
+            "id": "shopping_unreachable_goal_3",
+            "actual_decision": "REJECT",
+            "predicted_decision": "ACCEPT",
+            "actual_quality_score": 35,
+            "estimated_quality_score": 88.33,
+            "correct": false
+        }
+    ],
+    "input_file": "distilled_dataset/verified_tasks.json",
+    "model_file": "distilled_model/student_quality_model.json",
+    "output_file": "distilled_model/student_evaluation.json",
+    "predictions_file": "distilled_model/student_predictions.json",
+    "fitted_model_accuracy": 0.7164
+}

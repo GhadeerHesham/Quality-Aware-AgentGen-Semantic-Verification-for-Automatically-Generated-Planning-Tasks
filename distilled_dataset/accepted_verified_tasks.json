@@ -1,0 +1,1466 @@
+[
+    {
+        "id": "study_chain_goal_2",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_2.pddl",
+        "domain_pddl": "(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)",
+        "problem_pddl": "(define (problem study_chain_goal_2)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (chapter2-studied)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "review-notes",
+                    "take-quiz",
+                    "take-mock-exam",
+                    "pass-exam"
+                ],
+                "dead_action_count": 4
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 4,
+            "dead_actions": [
+                "review-notes",
+                "take-quiz",
+                "take-mock-exam",
+                "pass-exam"
+            ]
+        }
+    },
+    {
+        "id": "study_chain_goal_3",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_3.pddl",
+        "domain_pddl": "(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)",
+        "problem_pddl": "(define (problem study_chain_goal_3)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (notes-reviewed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 85,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 85,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "take-quiz",
+                    "take-mock-exam",
+                    "pass-exam"
+                ],
+                "dead_action_count": 3
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 85,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 3,
+            "dead_actions": [
+                "take-quiz",
+                "take-mock-exam",
+                "pass-exam"
+            ]
+        }
+    },
+    {
+        "id": "study_chain_goal_4",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_4.pddl",
+        "domain_pddl": "(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)",
+        "problem_pddl": "(define (problem study_chain_goal_4)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (quiz-completed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 90,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 90,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "take-mock-exam",
+                    "pass-exam"
+                ],
+                "dead_action_count": 2
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 90,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 2,
+            "dead_actions": [
+                "take-mock-exam",
+                "pass-exam"
+            ]
+        }
+    },
+    {
+        "id": "study_chain_goal_5",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_5.pddl",
+        "domain_pddl": "(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)",
+        "problem_pddl": "(define (problem study_chain_goal_5)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (mock-exam-completed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 95,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 95,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "pass-exam"
+                ],
+                "dead_action_count": 1
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 95,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 1,
+            "dead_actions": [
+                "pass-exam"
+            ]
+        }
+    },
+    {
+        "id": "study_chain_goal_6",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_chain_goal_6.pddl",
+        "domain_pddl": "(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)",
+        "problem_pddl": "(define (problem study_chain_goal_6)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (exam-passed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 100,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 100,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 100,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "study_trivial_final_goal",
+        "domain_file": "benchmark_domains\\study_domain.pddl",
+        "problem_file": "benchmark_problems\\study_trivial_final_goal.pddl",
+        "domain_pddl": "(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)",
+        "problem_pddl": "(define (problem study_trivial_final_goal)\n (:domain study_planning)\n\n (:init (exam-passed))\n\n (:goal\n    (exam-passed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": true
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": true,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "event_chain_goal_1",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_1.pddl",
+        "domain_pddl": "(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)",
+        "problem_pddl": "(define (problem event_chain_goal_1)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (venue-booked)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "arrange-catering",
+                    "confirm-speaker",
+                    "invite-guests",
+                    "prepare-event"
+                ],
+                "dead_action_count": 4
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 4,
+            "dead_actions": [
+                "arrange-catering",
+                "confirm-speaker",
+                "invite-guests",
+                "prepare-event"
+            ]
+        }
+    },
+    {
+        "id": "event_chain_goal_2",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_2.pddl",
+        "domain_pddl": "(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)",
+        "problem_pddl": "(define (problem event_chain_goal_2)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (catering-arranged)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 85,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 85,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "confirm-speaker",
+                    "invite-guests",
+                    "prepare-event"
+                ],
+                "dead_action_count": 3
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 85,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 3,
+            "dead_actions": [
+                "confirm-speaker",
+                "invite-guests",
+                "prepare-event"
+            ]
+        }
+    },
+    {
+        "id": "event_chain_goal_3",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_3.pddl",
+        "domain_pddl": "(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)",
+        "problem_pddl": "(define (problem event_chain_goal_3)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (speaker-confirmed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 90,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 90,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "invite-guests",
+                    "prepare-event"
+                ],
+                "dead_action_count": 2
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 90,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 2,
+            "dead_actions": [
+                "invite-guests",
+                "prepare-event"
+            ]
+        }
+    },
+    {
+        "id": "event_chain_goal_4",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_4.pddl",
+        "domain_pddl": "(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)",
+        "problem_pddl": "(define (problem event_chain_goal_4)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (guests-invited)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 95,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 95,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "prepare-event"
+                ],
+                "dead_action_count": 1
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 95,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 1,
+            "dead_actions": [
+                "prepare-event"
+            ]
+        }
+    },
+    {
+        "id": "event_chain_goal_5",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_chain_goal_5.pddl",
+        "domain_pddl": "(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)",
+        "problem_pddl": "(define (problem event_chain_goal_5)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (event-ready)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 100,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 100,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 100,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "event_trivial_final_goal",
+        "domain_file": "benchmark_domains\\event_domain.pddl",
+        "problem_file": "benchmark_problems\\event_trivial_final_goal.pddl",
+        "domain_pddl": "(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)",
+        "problem_pddl": "(define (problem event_trivial_final_goal)\n (:domain event_planning)\n\n (:init (event-ready))\n\n (:goal\n    (event-ready)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": true
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": true,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "travel_chain_goal_1",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_1.pddl",
+        "domain_pddl": "(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)",
+        "problem_pddl": "(define (problem travel_chain_goal_1)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (passport-ready)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "book-flight",
+                    "book-hotel",
+                    "pack-bags",
+                    "start-trip"
+                ],
+                "dead_action_count": 4
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 4,
+            "dead_actions": [
+                "book-flight",
+                "book-hotel",
+                "pack-bags",
+                "start-trip"
+            ]
+        }
+    },
+    {
+        "id": "travel_chain_goal_2",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_2.pddl",
+        "domain_pddl": "(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)",
+        "problem_pddl": "(define (problem travel_chain_goal_2)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (flight-booked)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 85,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 85,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "book-hotel",
+                    "pack-bags",
+                    "start-trip"
+                ],
+                "dead_action_count": 3
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 85,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 3,
+            "dead_actions": [
+                "book-hotel",
+                "pack-bags",
+                "start-trip"
+            ]
+        }
+    },
+    {
+        "id": "travel_chain_goal_3",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_3.pddl",
+        "domain_pddl": "(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)",
+        "problem_pddl": "(define (problem travel_chain_goal_3)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (hotel-booked)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 90,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 90,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "pack-bags",
+                    "start-trip"
+                ],
+                "dead_action_count": 2
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 90,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 2,
+            "dead_actions": [
+                "pack-bags",
+                "start-trip"
+            ]
+        }
+    },
+    {
+        "id": "travel_chain_goal_4",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_4.pddl",
+        "domain_pddl": "(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)",
+        "problem_pddl": "(define (problem travel_chain_goal_4)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (bags-packed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 95,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 95,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "start-trip"
+                ],
+                "dead_action_count": 1
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 95,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 1,
+            "dead_actions": [
+                "start-trip"
+            ]
+        }
+    },
+    {
+        "id": "travel_chain_goal_5",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_chain_goal_5.pddl",
+        "domain_pddl": "(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)",
+        "problem_pddl": "(define (problem travel_chain_goal_5)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (trip-started)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 100,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 100,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 100,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "travel_trivial_final_goal",
+        "domain_file": "benchmark_domains\\travel_domain.pddl",
+        "problem_file": "benchmark_problems\\travel_trivial_final_goal.pddl",
+        "domain_pddl": "(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)",
+        "problem_pddl": "(define (problem travel_trivial_final_goal)\n (:domain travel_planning)\n\n (:init (trip-started))\n\n (:goal\n    (trip-started)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": true
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": true,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "cooking_chain_goal_1",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_1.pddl",
+        "domain_pddl": "(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)",
+        "problem_pddl": "(define (problem cooking_chain_goal_1)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (ingredients-ready)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "chop-vegetables",
+                    "cook-sauce",
+                    "plate-meal",
+                    "serve-dinner"
+                ],
+                "dead_action_count": 4
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 4,
+            "dead_actions": [
+                "chop-vegetables",
+                "cook-sauce",
+                "plate-meal",
+                "serve-dinner"
+            ]
+        }
+    },
+    {
+        "id": "cooking_chain_goal_2",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_2.pddl",
+        "domain_pddl": "(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)",
+        "problem_pddl": "(define (problem cooking_chain_goal_2)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (vegetables-chopped)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 85,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 85,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "cook-sauce",
+                    "plate-meal",
+                    "serve-dinner"
+                ],
+                "dead_action_count": 3
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 85,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 3,
+            "dead_actions": [
+                "cook-sauce",
+                "plate-meal",
+                "serve-dinner"
+            ]
+        }
+    },
+    {
+        "id": "cooking_chain_goal_3",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_3.pddl",
+        "domain_pddl": "(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)",
+        "problem_pddl": "(define (problem cooking_chain_goal_3)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (sauce-cooked)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 90,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 90,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "plate-meal",
+                    "serve-dinner"
+                ],
+                "dead_action_count": 2
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 90,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 2,
+            "dead_actions": [
+                "plate-meal",
+                "serve-dinner"
+            ]
+        }
+    },
+    {
+        "id": "cooking_chain_goal_4",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_4.pddl",
+        "domain_pddl": "(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)",
+        "problem_pddl": "(define (problem cooking_chain_goal_4)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (meal-plated)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 95,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 95,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "serve-dinner"
+                ],
+                "dead_action_count": 1
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 95,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 1,
+            "dead_actions": [
+                "serve-dinner"
+            ]
+        }
+    },
+    {
+        "id": "cooking_chain_goal_5",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_chain_goal_5.pddl",
+        "domain_pddl": "(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)",
+        "problem_pddl": "(define (problem cooking_chain_goal_5)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (dinner-served)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 100,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 100,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 100,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "cooking_trivial_final_goal",
+        "domain_file": "benchmark_domains\\cooking_domain.pddl",
+        "problem_file": "benchmark_problems\\cooking_trivial_final_goal.pddl",
+        "domain_pddl": "(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)",
+        "problem_pddl": "(define (problem cooking_trivial_final_goal)\n (:domain cooking_planning)\n\n (:init (dinner-served))\n\n (:goal\n    (dinner-served)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": true
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": true,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "project_chain_goal_1",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_1.pddl",
+        "domain_pddl": "(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)",
+        "problem_pddl": "(define (problem project_chain_goal_1)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (requirements-written)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "approve-design",
+                    "build-prototype",
+                    "run-tests",
+                    "deliver-project"
+                ],
+                "dead_action_count": 4
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 4,
+            "dead_actions": [
+                "approve-design",
+                "build-prototype",
+                "run-tests",
+                "deliver-project"
+            ]
+        }
+    },
+    {
+        "id": "project_chain_goal_2",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_2.pddl",
+        "domain_pddl": "(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)",
+        "problem_pddl": "(define (problem project_chain_goal_2)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (design-approved)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 85,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 85,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "build-prototype",
+                    "run-tests",
+                    "deliver-project"
+                ],
+                "dead_action_count": 3
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 85,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 3,
+            "dead_actions": [
+                "build-prototype",
+                "run-tests",
+                "deliver-project"
+            ]
+        }
+    },
+    {
+        "id": "project_chain_goal_3",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_3.pddl",
+        "domain_pddl": "(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)",
+        "problem_pddl": "(define (problem project_chain_goal_3)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (prototype-built)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 90,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 90,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "run-tests",
+                    "deliver-project"
+                ],
+                "dead_action_count": 2
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 90,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 2,
+            "dead_actions": [
+                "run-tests",
+                "deliver-project"
+            ]
+        }
+    },
+    {
+        "id": "project_chain_goal_4",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_4.pddl",
+        "domain_pddl": "(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)",
+        "problem_pddl": "(define (problem project_chain_goal_4)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (tests-passed)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 95,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 95,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "deliver-project"
+                ],
+                "dead_action_count": 1
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 95,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 1,
+            "dead_actions": [
+                "deliver-project"
+            ]
+        }
+    },
+    {
+        "id": "project_chain_goal_5",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_chain_goal_5.pddl",
+        "domain_pddl": "(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)",
+        "problem_pddl": "(define (problem project_chain_goal_5)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (project-delivered)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 100,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 100,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 100,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "project_trivial_final_goal",
+        "domain_file": "benchmark_domains\\project_domain.pddl",
+        "problem_file": "benchmark_problems\\project_trivial_final_goal.pddl",
+        "domain_pddl": "(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)",
+        "problem_pddl": "(define (problem project_trivial_final_goal)\n (:domain project_planning)\n\n (:init (project-delivered))\n\n (:goal\n    (project-delivered)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": true
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": true,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "shopping_chain_goal_1",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_1.pddl",
+        "domain_pddl": "(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)",
+        "problem_pddl": "(define (problem shopping_chain_goal_1)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (list-made)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "visit-store",
+                    "buy-items",
+                    "complete-payment",
+                    "finish-shopping"
+                ],
+                "dead_action_count": 4
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 4,
+            "dead_actions": [
+                "visit-store",
+                "buy-items",
+                "complete-payment",
+                "finish-shopping"
+            ]
+        }
+    },
+    {
+        "id": "shopping_chain_goal_2",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_2.pddl",
+        "domain_pddl": "(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)",
+        "problem_pddl": "(define (problem shopping_chain_goal_2)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (store-visited)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 85,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 85,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "buy-items",
+                    "complete-payment",
+                    "finish-shopping"
+                ],
+                "dead_action_count": 3
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 85,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 3,
+            "dead_actions": [
+                "buy-items",
+                "complete-payment",
+                "finish-shopping"
+            ]
+        }
+    },
+    {
+        "id": "shopping_chain_goal_3",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_3.pddl",
+        "domain_pddl": "(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)",
+        "problem_pddl": "(define (problem shopping_chain_goal_3)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (items-bought)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 90,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 90,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "complete-payment",
+                    "finish-shopping"
+                ],
+                "dead_action_count": 2
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 90,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 2,
+            "dead_actions": [
+                "complete-payment",
+                "finish-shopping"
+            ]
+        }
+    },
+    {
+        "id": "shopping_chain_goal_4",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_4.pddl",
+        "domain_pddl": "(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)",
+        "problem_pddl": "(define (problem shopping_chain_goal_4)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (payment-complete)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 95,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 95,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [
+                    "finish-shopping"
+                ],
+                "dead_action_count": 1
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 95,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 1,
+            "dead_actions": [
+                "finish-shopping"
+            ]
+        }
+    },
+    {
+        "id": "shopping_chain_goal_5",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_chain_goal_5.pddl",
+        "domain_pddl": "(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)",
+        "problem_pddl": "(define (problem shopping_chain_goal_5)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (shopping-done)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 100,
+        "quality_label": "high",
+        "verifier_report": {
+            "quality_score": 100,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": false
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 100,
+            "reachable": true,
+            "trivial_problem": false,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    },
+    {
+        "id": "shopping_trivial_final_goal",
+        "domain_file": "benchmark_domains\\shopping_domain.pddl",
+        "problem_file": "benchmark_problems\\shopping_trivial_final_goal.pddl",
+        "domain_pddl": "(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)",
+        "problem_pddl": "(define (problem shopping_trivial_final_goal)\n (:domain shopping_planning)\n\n (:init (shopping-done))\n\n (:goal\n    (shopping-done)\n )\n)",
+        "decision": "ACCEPT",
+        "quality_score": 80,
+        "quality_label": "medium",
+        "verifier_report": {
+            "quality_score": 80,
+            "goal_reachability": {
+                "reachable": true,
+                "unreachable_goals": []
+            },
+            "trivial_goal": {
+                "trivial_problem": true
+            },
+            "object_consistency": {
+                "object_consistency": true,
+                "undefined_objects": []
+            },
+            "dead_actions": {
+                "dead_actions": [],
+                "dead_action_count": 0
+            }
+        },
+        "verifier_summary": {
+            "quality_score": 80,
+            "reachable": true,
+            "trivial_problem": true,
+            "object_consistency": true,
+            "dead_action_count": 0,
+            "dead_actions": []
+        }
+    }
+]

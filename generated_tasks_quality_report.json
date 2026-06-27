@@ -1,0 +1,2009 @@
+{
+    "input_file": "generated_tasks.json",
+    "threshold": 80,
+    "total_tasks": 67,
+    "accepted_count": 36,
+    "rejected_count": 31,
+    "accepted_ids": [
+        "study_chain_goal_2",
+        "study_chain_goal_3",
+        "study_chain_goal_4",
+        "study_chain_goal_5",
+        "study_chain_goal_6",
+        "study_trivial_final_goal",
+        "event_chain_goal_1",
+        "event_chain_goal_2",
+        "event_chain_goal_3",
+        "event_chain_goal_4",
+        "event_chain_goal_5",
+        "event_trivial_final_goal",
+        "travel_chain_goal_1",
+        "travel_chain_goal_2",
+        "travel_chain_goal_3",
+        "travel_chain_goal_4",
+        "travel_chain_goal_5",
+        "travel_trivial_final_goal",
+        "cooking_chain_goal_1",
+        "cooking_chain_goal_2",
+        "cooking_chain_goal_3",
+        "cooking_chain_goal_4",
+        "cooking_chain_goal_5",
+        "cooking_trivial_final_goal",
+        "project_chain_goal_1",
+        "project_chain_goal_2",
+        "project_chain_goal_3",
+        "project_chain_goal_4",
+        "project_chain_goal_5",
+        "project_trivial_final_goal",
+        "shopping_chain_goal_1",
+        "shopping_chain_goal_2",
+        "shopping_chain_goal_3",
+        "shopping_chain_goal_4",
+        "shopping_chain_goal_5",
+        "shopping_trivial_final_goal"
+    ],
+    "rejected_ids": [
+        "study_chain_goal_1",
+        "study_dead_branch_final_goal",
+        "study_trivial_dead_branch_goal",
+        "study_unreachable_goal_1",
+        "study_unreachable_goal_2",
+        "study_unreachable_goal_3",
+        "event_dead_branch_final_goal",
+        "event_trivial_dead_branch_goal",
+        "event_unreachable_goal_1",
+        "event_unreachable_goal_2",
+        "event_unreachable_goal_3",
+        "travel_dead_branch_final_goal",
+        "travel_trivial_dead_branch_goal",
+        "travel_unreachable_goal_1",
+        "travel_unreachable_goal_2",
+        "travel_unreachable_goal_3",
+        "cooking_dead_branch_final_goal",
+        "cooking_trivial_dead_branch_goal",
+        "cooking_unreachable_goal_1",
+        "cooking_unreachable_goal_2",
+        "cooking_unreachable_goal_3",
+        "project_dead_branch_final_goal",
+        "project_trivial_dead_branch_goal",
+        "project_unreachable_goal_1",
+        "project_unreachable_goal_2",
+        "project_unreachable_goal_3",
+        "shopping_dead_branch_final_goal",
+        "shopping_trivial_dead_branch_goal",
+        "shopping_unreachable_goal_1",
+        "shopping_unreachable_goal_2",
+        "shopping_unreachable_goal_3"
+    ],
+    "results": [
+        {
+            "id": "study_chain_goal_1",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_chain_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 75,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "study-chapter2",
+                        "review-notes",
+                        "take-quiz",
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "study_chain_goal_2",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_chain_goal_2.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "review-notes",
+                        "take-quiz",
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 4
+                }
+            }
+        },
+        {
+            "id": "study_chain_goal_3",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_chain_goal_3.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 85,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "take-quiz",
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 3
+                }
+            }
+        },
+        {
+            "id": "study_chain_goal_4",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_chain_goal_4.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 90,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 2
+                }
+            }
+        },
+        {
+            "id": "study_chain_goal_5",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_chain_goal_5.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 95,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 1
+                }
+            }
+        },
+        {
+            "id": "study_chain_goal_6",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_chain_goal_6.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 100,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "study_trivial_final_goal",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_trivial_final_goal.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "study_dead_branch_final_goal",
+            "domain_file": "benchmark_domains\\study_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\study_dead_branch_final_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 70,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "study-unused-action-1",
+                        "study-unused-action-2",
+                        "study-unused-action-3",
+                        "study-unused-action-4",
+                        "study-unused-action-5",
+                        "study-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "study_trivial_dead_branch_goal",
+            "domain_file": "benchmark_domains\\study_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\study_trivial_dead_branch_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 50,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "study-unused-action-1",
+                        "study-unused-action-2",
+                        "study-unused-action-3",
+                        "study-unused-action-4",
+                        "study-unused-action-5",
+                        "study-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "study_unreachable_goal_1",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_unreachable_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 30,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "study-impossible-goal-1/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "study-chapter1",
+                        "study-chapter2",
+                        "review-notes",
+                        "take-quiz",
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "study_unreachable_goal_2",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_unreachable_goal_2.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 30,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "study-impossible-goal-2/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "study-chapter1",
+                        "study-chapter2",
+                        "review-notes",
+                        "take-quiz",
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "study_unreachable_goal_3",
+            "domain_file": "benchmark_domains\\study_domain.pddl",
+            "problem_file": "benchmark_problems\\study_unreachable_goal_3.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 30,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "study-impossible-goal-3/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "study-chapter1",
+                        "study-chapter2",
+                        "review-notes",
+                        "take-quiz",
+                        "take-mock-exam",
+                        "pass-exam"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "event_chain_goal_1",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_chain_goal_1.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "arrange-catering",
+                        "confirm-speaker",
+                        "invite-guests",
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 4
+                }
+            }
+        },
+        {
+            "id": "event_chain_goal_2",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_chain_goal_2.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 85,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "confirm-speaker",
+                        "invite-guests",
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 3
+                }
+            }
+        },
+        {
+            "id": "event_chain_goal_3",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_chain_goal_3.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 90,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "invite-guests",
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 2
+                }
+            }
+        },
+        {
+            "id": "event_chain_goal_4",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_chain_goal_4.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 95,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 1
+                }
+            }
+        },
+        {
+            "id": "event_chain_goal_5",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_chain_goal_5.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 100,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "event_trivial_final_goal",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_trivial_final_goal.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "event_dead_branch_final_goal",
+            "domain_file": "benchmark_domains\\event_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\event_dead_branch_final_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 70,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "event-unused-action-1",
+                        "event-unused-action-2",
+                        "event-unused-action-3",
+                        "event-unused-action-4",
+                        "event-unused-action-5",
+                        "event-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "event_trivial_dead_branch_goal",
+            "domain_file": "benchmark_domains\\event_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\event_trivial_dead_branch_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 50,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "event-unused-action-1",
+                        "event-unused-action-2",
+                        "event-unused-action-3",
+                        "event-unused-action-4",
+                        "event-unused-action-5",
+                        "event-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "event_unreachable_goal_1",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_unreachable_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "event-impossible-goal-1/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "book-venue",
+                        "arrange-catering",
+                        "confirm-speaker",
+                        "invite-guests",
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "event_unreachable_goal_2",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_unreachable_goal_2.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "event-impossible-goal-2/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "book-venue",
+                        "arrange-catering",
+                        "confirm-speaker",
+                        "invite-guests",
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "event_unreachable_goal_3",
+            "domain_file": "benchmark_domains\\event_domain.pddl",
+            "problem_file": "benchmark_problems\\event_unreachable_goal_3.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "event-impossible-goal-3/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "book-venue",
+                        "arrange-catering",
+                        "confirm-speaker",
+                        "invite-guests",
+                        "prepare-event"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "travel_chain_goal_1",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_chain_goal_1.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "book-flight",
+                        "book-hotel",
+                        "pack-bags",
+                        "start-trip"
+                    ],
+                    "dead_action_count": 4
+                }
+            }
+        },
+        {
+            "id": "travel_chain_goal_2",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_chain_goal_2.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 85,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "book-hotel",
+                        "pack-bags",
+                        "start-trip"
+                    ],
+                    "dead_action_count": 3
+                }
+            }
+        },
+        {
+            "id": "travel_chain_goal_3",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_chain_goal_3.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 90,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "pack-bags",
+                        "start-trip"
+                    ],
+                    "dead_action_count": 2
+                }
+            }
+        },
+        {
+            "id": "travel_chain_goal_4",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_chain_goal_4.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 95,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "start-trip"
+                    ],
+                    "dead_action_count": 1
+                }
+            }
+        },
+        {
+            "id": "travel_chain_goal_5",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_chain_goal_5.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 100,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "travel_trivial_final_goal",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_trivial_final_goal.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "travel_dead_branch_final_goal",
+            "domain_file": "benchmark_domains\\travel_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_dead_branch_final_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 70,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "travel-unused-action-1",
+                        "travel-unused-action-2",
+                        "travel-unused-action-3",
+                        "travel-unused-action-4",
+                        "travel-unused-action-5",
+                        "travel-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "travel_trivial_dead_branch_goal",
+            "domain_file": "benchmark_domains\\travel_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_trivial_dead_branch_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 50,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "travel-unused-action-1",
+                        "travel-unused-action-2",
+                        "travel-unused-action-3",
+                        "travel-unused-action-4",
+                        "travel-unused-action-5",
+                        "travel-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "travel_unreachable_goal_1",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_unreachable_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "travel-impossible-goal-1/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-passport",
+                        "book-flight",
+                        "book-hotel",
+                        "pack-bags",
+                        "start-trip"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "travel_unreachable_goal_2",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_unreachable_goal_2.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "travel-impossible-goal-2/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-passport",
+                        "book-flight",
+                        "book-hotel",
+                        "pack-bags",
+                        "start-trip"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "travel_unreachable_goal_3",
+            "domain_file": "benchmark_domains\\travel_domain.pddl",
+            "problem_file": "benchmark_problems\\travel_unreachable_goal_3.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "travel-impossible-goal-3/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-passport",
+                        "book-flight",
+                        "book-hotel",
+                        "pack-bags",
+                        "start-trip"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "cooking_chain_goal_1",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_chain_goal_1.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "chop-vegetables",
+                        "cook-sauce",
+                        "plate-meal",
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 4
+                }
+            }
+        },
+        {
+            "id": "cooking_chain_goal_2",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_chain_goal_2.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 85,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "cook-sauce",
+                        "plate-meal",
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 3
+                }
+            }
+        },
+        {
+            "id": "cooking_chain_goal_3",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_chain_goal_3.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 90,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "plate-meal",
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 2
+                }
+            }
+        },
+        {
+            "id": "cooking_chain_goal_4",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_chain_goal_4.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 95,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 1
+                }
+            }
+        },
+        {
+            "id": "cooking_chain_goal_5",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_chain_goal_5.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 100,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "cooking_trivial_final_goal",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_trivial_final_goal.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "cooking_dead_branch_final_goal",
+            "domain_file": "benchmark_domains\\cooking_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_dead_branch_final_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 70,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "cooking-unused-action-1",
+                        "cooking-unused-action-2",
+                        "cooking-unused-action-3",
+                        "cooking-unused-action-4",
+                        "cooking-unused-action-5",
+                        "cooking-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "cooking_trivial_dead_branch_goal",
+            "domain_file": "benchmark_domains\\cooking_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_trivial_dead_branch_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 50,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "cooking-unused-action-1",
+                        "cooking-unused-action-2",
+                        "cooking-unused-action-3",
+                        "cooking-unused-action-4",
+                        "cooking-unused-action-5",
+                        "cooking-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "cooking_unreachable_goal_1",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_unreachable_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "cooking-impossible-goal-1/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-ingredients",
+                        "chop-vegetables",
+                        "cook-sauce",
+                        "plate-meal",
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "cooking_unreachable_goal_2",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_unreachable_goal_2.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "cooking-impossible-goal-2/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-ingredients",
+                        "chop-vegetables",
+                        "cook-sauce",
+                        "plate-meal",
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "cooking_unreachable_goal_3",
+            "domain_file": "benchmark_domains\\cooking_domain.pddl",
+            "problem_file": "benchmark_problems\\cooking_unreachable_goal_3.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "cooking-impossible-goal-3/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "prepare-ingredients",
+                        "chop-vegetables",
+                        "cook-sauce",
+                        "plate-meal",
+                        "serve-dinner"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "project_chain_goal_1",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_chain_goal_1.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "approve-design",
+                        "build-prototype",
+                        "run-tests",
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 4
+                }
+            }
+        },
+        {
+            "id": "project_chain_goal_2",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_chain_goal_2.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 85,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "build-prototype",
+                        "run-tests",
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 3
+                }
+            }
+        },
+        {
+            "id": "project_chain_goal_3",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_chain_goal_3.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 90,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "run-tests",
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 2
+                }
+            }
+        },
+        {
+            "id": "project_chain_goal_4",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_chain_goal_4.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 95,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 1
+                }
+            }
+        },
+        {
+            "id": "project_chain_goal_5",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_chain_goal_5.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 100,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "project_trivial_final_goal",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_trivial_final_goal.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "project_dead_branch_final_goal",
+            "domain_file": "benchmark_domains\\project_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\project_dead_branch_final_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 70,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "project-unused-action-1",
+                        "project-unused-action-2",
+                        "project-unused-action-3",
+                        "project-unused-action-4",
+                        "project-unused-action-5",
+                        "project-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "project_trivial_dead_branch_goal",
+            "domain_file": "benchmark_domains\\project_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\project_trivial_dead_branch_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 50,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "project-unused-action-1",
+                        "project-unused-action-2",
+                        "project-unused-action-3",
+                        "project-unused-action-4",
+                        "project-unused-action-5",
+                        "project-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "project_unreachable_goal_1",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_unreachable_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "project-impossible-goal-1/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "write-requirements",
+                        "approve-design",
+                        "build-prototype",
+                        "run-tests",
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "project_unreachable_goal_2",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_unreachable_goal_2.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "project-impossible-goal-2/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "write-requirements",
+                        "approve-design",
+                        "build-prototype",
+                        "run-tests",
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "project_unreachable_goal_3",
+            "domain_file": "benchmark_domains\\project_domain.pddl",
+            "problem_file": "benchmark_problems\\project_unreachable_goal_3.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "project-impossible-goal-3/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "write-requirements",
+                        "approve-design",
+                        "build-prototype",
+                        "run-tests",
+                        "deliver-project"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "shopping_chain_goal_1",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_chain_goal_1.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "visit-store",
+                        "buy-items",
+                        "complete-payment",
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 4
+                }
+            }
+        },
+        {
+            "id": "shopping_chain_goal_2",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_chain_goal_2.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 85,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "buy-items",
+                        "complete-payment",
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 3
+                }
+            }
+        },
+        {
+            "id": "shopping_chain_goal_3",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_chain_goal_3.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 90,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "complete-payment",
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 2
+                }
+            }
+        },
+        {
+            "id": "shopping_chain_goal_4",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_chain_goal_4.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 95,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 1
+                }
+            }
+        },
+        {
+            "id": "shopping_chain_goal_5",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_chain_goal_5.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 100,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "shopping_trivial_final_goal",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_trivial_final_goal.pddl",
+            "decision": "ACCEPT",
+            "report": {
+                "quality_score": 80,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [],
+                    "dead_action_count": 0
+                }
+            }
+        },
+        {
+            "id": "shopping_dead_branch_final_goal",
+            "domain_file": "benchmark_domains\\shopping_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_dead_branch_final_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 70,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "shopping-unused-action-1",
+                        "shopping-unused-action-2",
+                        "shopping-unused-action-3",
+                        "shopping-unused-action-4",
+                        "shopping-unused-action-5",
+                        "shopping-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "shopping_trivial_dead_branch_goal",
+            "domain_file": "benchmark_domains\\shopping_dead_branch_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_trivial_dead_branch_goal.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 50,
+                "goal_reachability": {
+                    "reachable": true,
+                    "unreachable_goals": []
+                },
+                "trivial_goal": {
+                    "trivial_problem": true
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "shopping-unused-action-1",
+                        "shopping-unused-action-2",
+                        "shopping-unused-action-3",
+                        "shopping-unused-action-4",
+                        "shopping-unused-action-5",
+                        "shopping-unused-action-6"
+                    ],
+                    "dead_action_count": 6
+                }
+            }
+        },
+        {
+            "id": "shopping_unreachable_goal_1",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_unreachable_goal_1.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "shopping-impossible-goal-1/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "make-list",
+                        "visit-store",
+                        "buy-items",
+                        "complete-payment",
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "shopping_unreachable_goal_2",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_unreachable_goal_2.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "shopping-impossible-goal-2/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "make-list",
+                        "visit-store",
+                        "buy-items",
+                        "complete-payment",
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        },
+        {
+            "id": "shopping_unreachable_goal_3",
+            "domain_file": "benchmark_domains\\shopping_domain.pddl",
+            "problem_file": "benchmark_problems\\shopping_unreachable_goal_3.pddl",
+            "decision": "REJECT",
+            "report": {
+                "quality_score": 35,
+                "goal_reachability": {
+                    "reachable": false,
+                    "unreachable_goals": [
+                        "shopping-impossible-goal-3/0"
+                    ]
+                },
+                "trivial_goal": {
+                    "trivial_problem": false
+                },
+                "object_consistency": {
+                    "object_consistency": true,
+                    "undefined_objects": []
+                },
+                "dead_actions": {
+                    "dead_actions": [
+                        "make-list",
+                        "visit-store",
+                        "buy-items",
+                        "complete-payment",
+                        "finish-shopping"
+                    ],
+                    "dead_action_count": 5
+                }
+            }
+        }
+    ]
+}

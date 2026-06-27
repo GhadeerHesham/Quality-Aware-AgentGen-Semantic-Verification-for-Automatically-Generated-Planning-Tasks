@@ -1,0 +1,873 @@
+[
+    {
+        "id": "study_chain_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_chain_goal_1)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (chapter1-studied)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 75,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 75,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"study-chapter2\",\n      \"review-notes\",\n      \"take-quiz\",\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_chain_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_chain_goal_2)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (chapter2-studied)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 4,\n    \"dead_actions\": [\n      \"review-notes\",\n      \"take-quiz\",\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_chain_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_chain_goal_3)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (notes-reviewed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 85,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 85,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 3,\n    \"dead_actions\": [\n      \"take-quiz\",\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_chain_goal_4",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_chain_goal_4)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (quiz-completed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 90,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 90,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 2,\n    \"dead_actions\": [\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_chain_goal_5",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_chain_goal_5)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (mock-exam-completed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 95,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 95,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 1,\n    \"dead_actions\": [\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_chain_goal_6",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_chain_goal_6)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (exam-passed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 100,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 100,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_trivial_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_trivial_final_goal)\n (:domain study_planning)\n\n (:init (exam-passed))\n\n (:goal\n    (exam-passed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_dead_branch_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n    (study-unused-1)\n    (study-unused-2)\n    (study-unused-3)\n    (study-unused-4)\n    (study-unused-5)\n    (study-unused-6)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n(:action study-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-1)\n)\n\n(:action study-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-2)\n)\n\n(:action study-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-3)\n)\n\n(:action study-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-4)\n)\n\n(:action study-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-5)\n)\n\n(:action study-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_dead_branch_final_goal)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (exam-passed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 70,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 70,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"study-unused-action-1\",\n      \"study-unused-action-2\",\n      \"study-unused-action-3\",\n      \"study-unused-action-4\",\n      \"study-unused-action-5\",\n      \"study-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_trivial_dead_branch_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n    (study-unused-1)\n    (study-unused-2)\n    (study-unused-3)\n    (study-unused-4)\n    (study-unused-5)\n    (study-unused-6)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n(:action study-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-1)\n)\n\n(:action study-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-2)\n)\n\n(:action study-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-3)\n)\n\n(:action study-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-4)\n)\n\n(:action study-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-5)\n)\n\n(:action study-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (study-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_trivial_dead_branch_goal)\n (:domain study_planning)\n\n (:init (exam-passed))\n\n (:goal\n    (exam-passed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 50,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 50,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"study-unused-action-1\",\n      \"study-unused-action-2\",\n      \"study-unused-action-3\",\n      \"study-unused-action-4\",\n      \"study-unused-action-5\",\n      \"study-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_unreachable_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_unreachable_goal_1)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (study-impossible-goal-1)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 30,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 30,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"study-chapter1\",\n      \"study-chapter2\",\n      \"review-notes\",\n      \"take-quiz\",\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_unreachable_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_unreachable_goal_2)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (study-impossible-goal-2)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 30,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 30,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"study-chapter1\",\n      \"study-chapter2\",\n      \"review-notes\",\n      \"take-quiz\",\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "study_unreachable_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain study_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (chapter1-studied)\n    (chapter2-studied)\n    (notes-reviewed)\n    (quiz-completed)\n    (mock-exam-completed)\n    (exam-passed)\n    (study-impossible-goal-1)\n    (study-impossible-goal-2)\n    (study-impossible-goal-3)\n)\n\n(:action study-chapter1\n    :parameters ()\n    :precondition (and)\n    :effect (chapter1-studied)\n)\n\n(:action study-chapter2\n    :parameters ()\n    :precondition (chapter1-studied)\n    :effect (chapter2-studied)\n)\n\n(:action review-notes\n    :parameters ()\n    :precondition (chapter2-studied)\n    :effect (notes-reviewed)\n)\n\n(:action take-quiz\n    :parameters ()\n    :precondition (notes-reviewed)\n    :effect (quiz-completed)\n)\n\n(:action take-mock-exam\n    :parameters ()\n    :precondition (quiz-completed)\n    :effect (mock-exam-completed)\n)\n\n(:action pass-exam\n    :parameters ()\n    :precondition (mock-exam-completed)\n    :effect (exam-passed)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem study_unreachable_goal_3)\n (:domain study_planning)\n\n (:init )\n\n (:goal\n    (study-impossible-goal-3)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 30,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 30,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"study-chapter1\",\n      \"study-chapter2\",\n      \"review-notes\",\n      \"take-quiz\",\n      \"take-mock-exam\",\n      \"pass-exam\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_chain_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_chain_goal_1)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (venue-booked)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 4,\n    \"dead_actions\": [\n      \"arrange-catering\",\n      \"confirm-speaker\",\n      \"invite-guests\",\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_chain_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_chain_goal_2)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (catering-arranged)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 85,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 85,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 3,\n    \"dead_actions\": [\n      \"confirm-speaker\",\n      \"invite-guests\",\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_chain_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_chain_goal_3)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (speaker-confirmed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 90,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 90,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 2,\n    \"dead_actions\": [\n      \"invite-guests\",\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_chain_goal_4",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_chain_goal_4)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (guests-invited)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 95,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 95,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 1,\n    \"dead_actions\": [\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_chain_goal_5",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_chain_goal_5)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (event-ready)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 100,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 100,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_trivial_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_trivial_final_goal)\n (:domain event_planning)\n\n (:init (event-ready))\n\n (:goal\n    (event-ready)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_dead_branch_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n    (event-unused-1)\n    (event-unused-2)\n    (event-unused-3)\n    (event-unused-4)\n    (event-unused-5)\n    (event-unused-6)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n(:action event-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-1)\n)\n\n(:action event-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-2)\n)\n\n(:action event-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-3)\n)\n\n(:action event-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-4)\n)\n\n(:action event-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-5)\n)\n\n(:action event-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_dead_branch_final_goal)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (event-ready)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 70,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 70,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"event-unused-action-1\",\n      \"event-unused-action-2\",\n      \"event-unused-action-3\",\n      \"event-unused-action-4\",\n      \"event-unused-action-5\",\n      \"event-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_trivial_dead_branch_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n    (event-unused-1)\n    (event-unused-2)\n    (event-unused-3)\n    (event-unused-4)\n    (event-unused-5)\n    (event-unused-6)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n(:action event-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-1)\n)\n\n(:action event-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-2)\n)\n\n(:action event-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-3)\n)\n\n(:action event-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-4)\n)\n\n(:action event-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-5)\n)\n\n(:action event-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (event-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_trivial_dead_branch_goal)\n (:domain event_planning)\n\n (:init (event-ready))\n\n (:goal\n    (event-ready)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 50,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 50,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"event-unused-action-1\",\n      \"event-unused-action-2\",\n      \"event-unused-action-3\",\n      \"event-unused-action-4\",\n      \"event-unused-action-5\",\n      \"event-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_unreachable_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_unreachable_goal_1)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (event-impossible-goal-1)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"book-venue\",\n      \"arrange-catering\",\n      \"confirm-speaker\",\n      \"invite-guests\",\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_unreachable_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_unreachable_goal_2)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (event-impossible-goal-2)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"book-venue\",\n      \"arrange-catering\",\n      \"confirm-speaker\",\n      \"invite-guests\",\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "event_unreachable_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain event_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (venue-booked)\n    (catering-arranged)\n    (speaker-confirmed)\n    (guests-invited)\n    (event-ready)\n    (event-impossible-goal-1)\n    (event-impossible-goal-2)\n    (event-impossible-goal-3)\n)\n\n(:action book-venue\n    :parameters ()\n    :precondition (and)\n    :effect (venue-booked)\n)\n\n(:action arrange-catering\n    :parameters ()\n    :precondition (venue-booked)\n    :effect (catering-arranged)\n)\n\n(:action confirm-speaker\n    :parameters ()\n    :precondition (catering-arranged)\n    :effect (speaker-confirmed)\n)\n\n(:action invite-guests\n    :parameters ()\n    :precondition (speaker-confirmed)\n    :effect (guests-invited)\n)\n\n(:action prepare-event\n    :parameters ()\n    :precondition (guests-invited)\n    :effect (event-ready)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem event_unreachable_goal_3)\n (:domain event_planning)\n\n (:init )\n\n (:goal\n    (event-impossible-goal-3)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"book-venue\",\n      \"arrange-catering\",\n      \"confirm-speaker\",\n      \"invite-guests\",\n      \"prepare-event\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_chain_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_chain_goal_1)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (passport-ready)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 4,\n    \"dead_actions\": [\n      \"book-flight\",\n      \"book-hotel\",\n      \"pack-bags\",\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_chain_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_chain_goal_2)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (flight-booked)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 85,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 85,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 3,\n    \"dead_actions\": [\n      \"book-hotel\",\n      \"pack-bags\",\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_chain_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_chain_goal_3)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (hotel-booked)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 90,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 90,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 2,\n    \"dead_actions\": [\n      \"pack-bags\",\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_chain_goal_4",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_chain_goal_4)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (bags-packed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 95,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 95,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 1,\n    \"dead_actions\": [\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_chain_goal_5",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_chain_goal_5)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (trip-started)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 100,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 100,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_trivial_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_trivial_final_goal)\n (:domain travel_planning)\n\n (:init (trip-started))\n\n (:goal\n    (trip-started)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_dead_branch_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n    (travel-unused-1)\n    (travel-unused-2)\n    (travel-unused-3)\n    (travel-unused-4)\n    (travel-unused-5)\n    (travel-unused-6)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n(:action travel-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-1)\n)\n\n(:action travel-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-2)\n)\n\n(:action travel-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-3)\n)\n\n(:action travel-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-4)\n)\n\n(:action travel-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-5)\n)\n\n(:action travel-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_dead_branch_final_goal)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (trip-started)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 70,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 70,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"travel-unused-action-1\",\n      \"travel-unused-action-2\",\n      \"travel-unused-action-3\",\n      \"travel-unused-action-4\",\n      \"travel-unused-action-5\",\n      \"travel-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_trivial_dead_branch_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n    (travel-unused-1)\n    (travel-unused-2)\n    (travel-unused-3)\n    (travel-unused-4)\n    (travel-unused-5)\n    (travel-unused-6)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n(:action travel-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-1)\n)\n\n(:action travel-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-2)\n)\n\n(:action travel-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-3)\n)\n\n(:action travel-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-4)\n)\n\n(:action travel-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-5)\n)\n\n(:action travel-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (travel-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_trivial_dead_branch_goal)\n (:domain travel_planning)\n\n (:init (trip-started))\n\n (:goal\n    (trip-started)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 50,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 50,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"travel-unused-action-1\",\n      \"travel-unused-action-2\",\n      \"travel-unused-action-3\",\n      \"travel-unused-action-4\",\n      \"travel-unused-action-5\",\n      \"travel-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_unreachable_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_unreachable_goal_1)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (travel-impossible-goal-1)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"prepare-passport\",\n      \"book-flight\",\n      \"book-hotel\",\n      \"pack-bags\",\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_unreachable_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_unreachable_goal_2)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (travel-impossible-goal-2)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"prepare-passport\",\n      \"book-flight\",\n      \"book-hotel\",\n      \"pack-bags\",\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "travel_unreachable_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain travel_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (passport-ready)\n    (flight-booked)\n    (hotel-booked)\n    (bags-packed)\n    (trip-started)\n    (travel-impossible-goal-1)\n    (travel-impossible-goal-2)\n    (travel-impossible-goal-3)\n)\n\n(:action prepare-passport\n    :parameters ()\n    :precondition (and)\n    :effect (passport-ready)\n)\n\n(:action book-flight\n    :parameters ()\n    :precondition (passport-ready)\n    :effect (flight-booked)\n)\n\n(:action book-hotel\n    :parameters ()\n    :precondition (flight-booked)\n    :effect (hotel-booked)\n)\n\n(:action pack-bags\n    :parameters ()\n    :precondition (hotel-booked)\n    :effect (bags-packed)\n)\n\n(:action start-trip\n    :parameters ()\n    :precondition (bags-packed)\n    :effect (trip-started)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem travel_unreachable_goal_3)\n (:domain travel_planning)\n\n (:init )\n\n (:goal\n    (travel-impossible-goal-3)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"prepare-passport\",\n      \"book-flight\",\n      \"book-hotel\",\n      \"pack-bags\",\n      \"start-trip\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_chain_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_chain_goal_1)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (ingredients-ready)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 4,\n    \"dead_actions\": [\n      \"chop-vegetables\",\n      \"cook-sauce\",\n      \"plate-meal\",\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_chain_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_chain_goal_2)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (vegetables-chopped)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 85,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 85,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 3,\n    \"dead_actions\": [\n      \"cook-sauce\",\n      \"plate-meal\",\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_chain_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_chain_goal_3)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (sauce-cooked)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 90,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 90,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 2,\n    \"dead_actions\": [\n      \"plate-meal\",\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_chain_goal_4",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_chain_goal_4)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (meal-plated)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 95,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 95,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 1,\n    \"dead_actions\": [\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_chain_goal_5",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_chain_goal_5)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (dinner-served)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 100,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 100,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_trivial_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_trivial_final_goal)\n (:domain cooking_planning)\n\n (:init (dinner-served))\n\n (:goal\n    (dinner-served)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_dead_branch_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n    (cooking-unused-1)\n    (cooking-unused-2)\n    (cooking-unused-3)\n    (cooking-unused-4)\n    (cooking-unused-5)\n    (cooking-unused-6)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n(:action cooking-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-1)\n)\n\n(:action cooking-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-2)\n)\n\n(:action cooking-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-3)\n)\n\n(:action cooking-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-4)\n)\n\n(:action cooking-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-5)\n)\n\n(:action cooking-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_dead_branch_final_goal)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (dinner-served)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 70,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 70,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"cooking-unused-action-1\",\n      \"cooking-unused-action-2\",\n      \"cooking-unused-action-3\",\n      \"cooking-unused-action-4\",\n      \"cooking-unused-action-5\",\n      \"cooking-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_trivial_dead_branch_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n    (cooking-unused-1)\n    (cooking-unused-2)\n    (cooking-unused-3)\n    (cooking-unused-4)\n    (cooking-unused-5)\n    (cooking-unused-6)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n(:action cooking-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-1)\n)\n\n(:action cooking-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-2)\n)\n\n(:action cooking-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-3)\n)\n\n(:action cooking-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-4)\n)\n\n(:action cooking-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-5)\n)\n\n(:action cooking-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (cooking-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_trivial_dead_branch_goal)\n (:domain cooking_planning)\n\n (:init (dinner-served))\n\n (:goal\n    (dinner-served)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 50,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 50,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"cooking-unused-action-1\",\n      \"cooking-unused-action-2\",\n      \"cooking-unused-action-3\",\n      \"cooking-unused-action-4\",\n      \"cooking-unused-action-5\",\n      \"cooking-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_unreachable_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_unreachable_goal_1)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (cooking-impossible-goal-1)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"prepare-ingredients\",\n      \"chop-vegetables\",\n      \"cook-sauce\",\n      \"plate-meal\",\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_unreachable_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_unreachable_goal_2)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (cooking-impossible-goal-2)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"prepare-ingredients\",\n      \"chop-vegetables\",\n      \"cook-sauce\",\n      \"plate-meal\",\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "cooking_unreachable_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain cooking_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (ingredients-ready)\n    (vegetables-chopped)\n    (sauce-cooked)\n    (meal-plated)\n    (dinner-served)\n    (cooking-impossible-goal-1)\n    (cooking-impossible-goal-2)\n    (cooking-impossible-goal-3)\n)\n\n(:action prepare-ingredients\n    :parameters ()\n    :precondition (and)\n    :effect (ingredients-ready)\n)\n\n(:action chop-vegetables\n    :parameters ()\n    :precondition (ingredients-ready)\n    :effect (vegetables-chopped)\n)\n\n(:action cook-sauce\n    :parameters ()\n    :precondition (vegetables-chopped)\n    :effect (sauce-cooked)\n)\n\n(:action plate-meal\n    :parameters ()\n    :precondition (sauce-cooked)\n    :effect (meal-plated)\n)\n\n(:action serve-dinner\n    :parameters ()\n    :precondition (meal-plated)\n    :effect (dinner-served)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem cooking_unreachable_goal_3)\n (:domain cooking_planning)\n\n (:init )\n\n (:goal\n    (cooking-impossible-goal-3)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"prepare-ingredients\",\n      \"chop-vegetables\",\n      \"cook-sauce\",\n      \"plate-meal\",\n      \"serve-dinner\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_chain_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_chain_goal_1)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (requirements-written)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 4,\n    \"dead_actions\": [\n      \"approve-design\",\n      \"build-prototype\",\n      \"run-tests\",\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_chain_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_chain_goal_2)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (design-approved)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 85,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 85,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 3,\n    \"dead_actions\": [\n      \"build-prototype\",\n      \"run-tests\",\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_chain_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_chain_goal_3)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (prototype-built)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 90,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 90,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 2,\n    \"dead_actions\": [\n      \"run-tests\",\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_chain_goal_4",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_chain_goal_4)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (tests-passed)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 95,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 95,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 1,\n    \"dead_actions\": [\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_chain_goal_5",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_chain_goal_5)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (project-delivered)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 100,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 100,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_trivial_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_trivial_final_goal)\n (:domain project_planning)\n\n (:init (project-delivered))\n\n (:goal\n    (project-delivered)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_dead_branch_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n    (project-unused-1)\n    (project-unused-2)\n    (project-unused-3)\n    (project-unused-4)\n    (project-unused-5)\n    (project-unused-6)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n(:action project-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-1)\n)\n\n(:action project-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-2)\n)\n\n(:action project-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-3)\n)\n\n(:action project-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-4)\n)\n\n(:action project-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-5)\n)\n\n(:action project-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_dead_branch_final_goal)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (project-delivered)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 70,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 70,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"project-unused-action-1\",\n      \"project-unused-action-2\",\n      \"project-unused-action-3\",\n      \"project-unused-action-4\",\n      \"project-unused-action-5\",\n      \"project-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_trivial_dead_branch_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n    (project-unused-1)\n    (project-unused-2)\n    (project-unused-3)\n    (project-unused-4)\n    (project-unused-5)\n    (project-unused-6)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n(:action project-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-1)\n)\n\n(:action project-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-2)\n)\n\n(:action project-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-3)\n)\n\n(:action project-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-4)\n)\n\n(:action project-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-5)\n)\n\n(:action project-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (project-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_trivial_dead_branch_goal)\n (:domain project_planning)\n\n (:init (project-delivered))\n\n (:goal\n    (project-delivered)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 50,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 50,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"project-unused-action-1\",\n      \"project-unused-action-2\",\n      \"project-unused-action-3\",\n      \"project-unused-action-4\",\n      \"project-unused-action-5\",\n      \"project-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_unreachable_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_unreachable_goal_1)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (project-impossible-goal-1)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"write-requirements\",\n      \"approve-design\",\n      \"build-prototype\",\n      \"run-tests\",\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_unreachable_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_unreachable_goal_2)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (project-impossible-goal-2)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"write-requirements\",\n      \"approve-design\",\n      \"build-prototype\",\n      \"run-tests\",\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "project_unreachable_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain project_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (requirements-written)\n    (design-approved)\n    (prototype-built)\n    (tests-passed)\n    (project-delivered)\n    (project-impossible-goal-1)\n    (project-impossible-goal-2)\n    (project-impossible-goal-3)\n)\n\n(:action write-requirements\n    :parameters ()\n    :precondition (and)\n    :effect (requirements-written)\n)\n\n(:action approve-design\n    :parameters ()\n    :precondition (requirements-written)\n    :effect (design-approved)\n)\n\n(:action build-prototype\n    :parameters ()\n    :precondition (design-approved)\n    :effect (prototype-built)\n)\n\n(:action run-tests\n    :parameters ()\n    :precondition (prototype-built)\n    :effect (tests-passed)\n)\n\n(:action deliver-project\n    :parameters ()\n    :precondition (tests-passed)\n    :effect (project-delivered)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem project_unreachable_goal_3)\n (:domain project_planning)\n\n (:init )\n\n (:goal\n    (project-impossible-goal-3)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"write-requirements\",\n      \"approve-design\",\n      \"build-prototype\",\n      \"run-tests\",\n      \"deliver-project\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_chain_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_chain_goal_1)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (list-made)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 4,\n    \"dead_actions\": [\n      \"visit-store\",\n      \"buy-items\",\n      \"complete-payment\",\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_chain_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_chain_goal_2)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (store-visited)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 85,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 85,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 3,\n    \"dead_actions\": [\n      \"buy-items\",\n      \"complete-payment\",\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_chain_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_chain_goal_3)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (items-bought)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 90,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 90,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 2,\n    \"dead_actions\": [\n      \"complete-payment\",\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_chain_goal_4",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_chain_goal_4)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (payment-complete)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 95,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 95,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 1,\n    \"dead_actions\": [\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_chain_goal_5",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_chain_goal_5)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (shopping-done)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 100,\n  \"quality_label\": \"high\",\n  \"verifier_summary\": {\n    \"quality_score\": 100,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_trivial_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_trivial_final_goal)\n (:domain shopping_planning)\n\n (:init (shopping-done))\n\n (:goal\n    (shopping-done)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"ACCEPT\",\n  \"quality_score\": 80,\n  \"quality_label\": \"medium\",\n  \"verifier_summary\": {\n    \"quality_score\": 80,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 0,\n    \"dead_actions\": []\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_dead_branch_final_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n    (shopping-unused-1)\n    (shopping-unused-2)\n    (shopping-unused-3)\n    (shopping-unused-4)\n    (shopping-unused-5)\n    (shopping-unused-6)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n(:action shopping-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-1)\n)\n\n(:action shopping-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-2)\n)\n\n(:action shopping-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-3)\n)\n\n(:action shopping-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-4)\n)\n\n(:action shopping-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-5)\n)\n\n(:action shopping-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_dead_branch_final_goal)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (shopping-done)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 70,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 70,\n    \"reachable\": true,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"shopping-unused-action-1\",\n      \"shopping-unused-action-2\",\n      \"shopping-unused-action-3\",\n      \"shopping-unused-action-4\",\n      \"shopping-unused-action-5\",\n      \"shopping-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_trivial_dead_branch_goal",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n    (shopping-unused-1)\n    (shopping-unused-2)\n    (shopping-unused-3)\n    (shopping-unused-4)\n    (shopping-unused-5)\n    (shopping-unused-6)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n(:action shopping-unused-action-1\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-1)\n)\n\n(:action shopping-unused-action-2\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-2)\n)\n\n(:action shopping-unused-action-3\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-3)\n)\n\n(:action shopping-unused-action-4\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-4)\n)\n\n(:action shopping-unused-action-5\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-5)\n)\n\n(:action shopping-unused-action-6\n    :parameters ()\n    :precondition (and)\n    :effect (shopping-unused-6)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_trivial_dead_branch_goal)\n (:domain shopping_planning)\n\n (:init (shopping-done))\n\n (:goal\n    (shopping-done)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 50,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 50,\n    \"reachable\": true,\n    \"trivial_problem\": true,\n    \"object_consistency\": true,\n    \"dead_action_count\": 6,\n    \"dead_actions\": [\n      \"shopping-unused-action-1\",\n      \"shopping-unused-action-2\",\n      \"shopping-unused-action-3\",\n      \"shopping-unused-action-4\",\n      \"shopping-unused-action-5\",\n      \"shopping-unused-action-6\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_unreachable_goal_1",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_unreachable_goal_1)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (shopping-impossible-goal-1)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"make-list\",\n      \"visit-store\",\n      \"buy-items\",\n      \"complete-payment\",\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_unreachable_goal_2",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_unreachable_goal_2)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (shopping-impossible-goal-2)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"make-list\",\n      \"visit-store\",\n      \"buy-items\",\n      \"complete-payment\",\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "shopping_unreachable_goal_3",
+        "messages": [
+            {
+                "role": "user",
+                "content": "Evaluate the quality of this generated PDDL planning task. Return a JSON object with decision, quality_score, quality_label, and verifier_summary.\n\nDOMAIN PDDL:\n(define (domain shopping_planning)\n\n(:requirements :strips)\n\n(:predicates\n    (list-made)\n    (store-visited)\n    (items-bought)\n    (payment-complete)\n    (shopping-done)\n    (shopping-impossible-goal-1)\n    (shopping-impossible-goal-2)\n    (shopping-impossible-goal-3)\n)\n\n(:action make-list\n    :parameters ()\n    :precondition (and)\n    :effect (list-made)\n)\n\n(:action visit-store\n    :parameters ()\n    :precondition (list-made)\n    :effect (store-visited)\n)\n\n(:action buy-items\n    :parameters ()\n    :precondition (store-visited)\n    :effect (items-bought)\n)\n\n(:action complete-payment\n    :parameters ()\n    :precondition (items-bought)\n    :effect (payment-complete)\n)\n\n(:action finish-shopping\n    :parameters ()\n    :precondition (payment-complete)\n    :effect (shopping-done)\n)\n\n)\n\nPROBLEM PDDL:\n(define (problem shopping_unreachable_goal_3)\n (:domain shopping_planning)\n\n (:init )\n\n (:goal\n    (shopping-impossible-goal-3)\n )\n)"
+            },
+            {
+                "role": "assistant",
+                "content": "{\n  \"decision\": \"REJECT\",\n  \"quality_score\": 35,\n  \"quality_label\": \"low\",\n  \"verifier_summary\": {\n    \"quality_score\": 35,\n    \"reachable\": false,\n    \"trivial_problem\": false,\n    \"object_consistency\": true,\n    \"dead_action_count\": 5,\n    \"dead_actions\": [\n      \"make-list\",\n      \"visit-store\",\n      \"buy-items\",\n      \"complete-payment\",\n      \"finish-shopping\"\n    ]\n  }\n}"
+            }
+        ]
+    }
+]
